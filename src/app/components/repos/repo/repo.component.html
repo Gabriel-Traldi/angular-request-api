@@ -1,0 +1,24 @@
+<div class="card-repo">
+  <mat-card class="card">
+    <mat-card-header>
+      <div mat-card-avatar class="header-image"
+        [ngStyle]="{'background-image': 'url(' + infoGit.owner?.avatar_url + ')'}"></div>
+      <mat-card-title class="header-title">
+        <a class="link--no-appearance" target="_blank" [href]="infoGit.owner?.html_url">{{infoGit.name}}</a>
+      </mat-card-title>
+      <mat-card-subtitle>{{ infoGit.language }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        {{infoGit.description}}
+        <a [href]="infoGit.homepage">{{infoGit.homepage}}</a>
+      </p>
+    </mat-card-content>
+    <mat-card-content>
+      <p class="align-icons-text">
+        <mat-icon>star</mat-icon> {{infoGit.stargazers_count}}
+        <mat-icon>visibility</mat-icon> {{infoGit.subscribers_count}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
